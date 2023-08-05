@@ -1,0 +1,80 @@
+body {
+    background-color: #dee5ca;
+    color: #6b6c64;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+h1 {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.memory-game {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: grid;
+    margin-top: 70px;
+    margin-right: 1%;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    grid-template-columns: repeat(4, 10%);
+    grid-template-rows: repeat(4, 10%);
+
+}
+@media screen and (max-width:1080px){
+
+    .container {
+
+        gap: 100px;
+        grid-template-columns: repeat(3, 10%);
+        grid-template-rows: repeat(5, 10%);
+    
+    }
+    img {
+
+        background-color: antiquewhite;
+        max-width: 250px;
+        max-height: 200px;
+
+    }
+    
+}
+p {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+img {
+
+    background-color: antiquewhite;
+    width: 250px;
+    max-width: 100px;
+    max-height: 150px;
+
+    transition: all 0.4s ease-in-out;
+}
+
+@keyframes matchAnimation {
+    0% {
+        transform: scale(1 rotateY(-180deg));
+    }
+
+    50% {
+        transform: scale(1.2) rotateY(-180deg);
+    }
+
+    100% {
+        transform: scale(1) rotateY(-180deg);
+    }
+}
+
+.match {
+    animation: matchAnimation 0.5s ease;
+    animation-play-state: running;
+}
